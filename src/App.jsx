@@ -16,7 +16,6 @@ export default function App() {
   }, [])
  
   
-
   return (
     <>
       <header>
@@ -34,7 +33,7 @@ export default function App() {
         element={<Dashboard hiredPeople={hiredPeople} people={people}/>}/>
         <Route
         path='/view/:uuid'
-        element={<PersonProfile people={people} setHiredPeople={setHiredPeople}/>}/>
+        element={<PersonProfile people={people} setHiredPeople={setHiredPeople} hiredPeople={hiredPeople}/>}/>
       </Routes>
     </>
   )
