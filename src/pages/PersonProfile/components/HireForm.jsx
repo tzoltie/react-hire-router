@@ -11,7 +11,6 @@ function HireForm(props) {
 
     setHiredPeople([...hiredPeople, {...person, wage: wage}])
     navigate('/dashboard')
-    console.log('hiredPeople', hiredPeople)
   }
 
   return (

@@ -7,7 +7,7 @@ import PersonProfile from './pages/PersonProfile'
 export default function App() {
   const [hiredPeople, setHiredPeople] = useState([])
   const [people, setPeople] = useState([])
-
+  console.log('hiredPerople', hiredPeople)
   useEffect(() => {
 
     fetch('https://randomuser.me/api/?results=50')
