@@ -9,11 +9,13 @@ export default function App() {
   const [people, setPeople] = useState([])
 
   useEffect(() => {
+
     fetch('https://randomuser.me/api/?results=50')
       .then(response => response.json())
       .then(json => setPeople(json.results))
   }, [])
  
+  
 
   return (
     <>
@@ -32,7 +34,7 @@ export default function App() {
         element={<Dashboard hiredPeople={hiredPeople} people={people}/>}/>
         <Route
         path='/view/:uuid'
-        element={<PersonProfile people={people}/>}/>
+        element={<PersonProfile people={people} setHiredPeople={setHiredPeople}/>}/>
       </Routes>
     </>
   )
