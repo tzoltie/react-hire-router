@@ -8,10 +8,8 @@ function HireForm(props) {
 
   function handleSubmit(event) {
     event.preventDefault()
-    const {value} = event.target
 
-    // wage value not currently showing in person's object
-    console.log({...person, wage: value})
+    setHiredPeople([{...person, wage: wage}])
     navigate('/dashboard')
   }
 
